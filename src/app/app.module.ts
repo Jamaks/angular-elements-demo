@@ -1,18 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatRadioButton, MatRadioModule,
+   MatCard, MatCardModule  } from '@angular/material';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FirstComponent } from './first.component';
 
-
-import { AppComponent } from './app.component';
-
+export const entryComponents = [
+  MatRadioButton, MatCard,
+  FirstComponent
+];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    MatRadioModule,
+    MatCardModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: 'TEST_VALUE', useValue: 'TEST' },
+  ],
+  declarations: [FirstComponent],
+  entryComponents,
 })
-export class AppModule { }
+export class AppModule {
+  ngDoBootstrap() { }
+}

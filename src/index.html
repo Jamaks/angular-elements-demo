@@ -2,13 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AngularElements</title>
+  <title>AngularTemplate</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <title>Angular Elements Material</title>
 </head>
 <body>
-  <app-root></app-root>
+<div class="main-content">
+
+  <form class="config-panel">
+
+    
+    <mat-card>
+      <app-first color=""></app-first>
+      <label class="config-panel-label">
+        <span>Color:</span>
+        <mat-radio-group class="radio-group">
+          <mat-radio-button name="color" value="primary" checked="true">Primary</mat-radio-button>
+          <mat-radio-button name="color" value="accent">Accent</mat-radio-button>
+          <mat-radio-button name="color" value="warn">Warn</mat-radio-button>
+        </mat-radio-group>
+      </label>
+    </mat-card>
+  </form>
+  
+</div>
+
 </body>
 </html>

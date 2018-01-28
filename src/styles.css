@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.main-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-content > * {
+  flex: 1;
+}
+
+.config-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.config-panel-label {
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex: 0 0 75px;
+}
+.config-panel-label:last-of-type {
+  border-bottom: none;
+}
+
+.config-panel-label > * {
+  flex: 1 1 0px;
+}
+.config-panel-label > *:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
